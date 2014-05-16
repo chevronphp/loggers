@@ -8,7 +8,9 @@ chevron.db PDOWrapperInterface.
 
 # usage
 
-If there isn't an examples dir, look through the tests.
+If there isn't an examples dir, look through the tests. In this case there aren't any,
+read up on PSR-3 and you'll be just fine. Consider using monolog--that's what all
+the cool kids are doing.
 
 # installation
 
