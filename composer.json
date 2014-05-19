@@ -17,7 +17,7 @@
 	"require": {
 		"php"                 : ">=5.4.0",
 		"psr/log"             : "1.*",
-		"henderjon/chevron.db": "2.*"
+		"henderjon/chevron-db": "2.*"
 	},
 	"require-dev": {
 		"funkatron/funit" : "dev-master"
