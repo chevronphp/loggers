@@ -14,7 +14,12 @@ the cool kids are doing.
 
 # installation
 
-Using [composer](http://getcomposer.org/) `"require" : { "henderjon/chevron-loggers": "1.*" }`
+Using [composer](http://getcomposer.org/) `"require" : { "henderjon/chevron-loggers": "2.*" }`
+
+# where is version 1.*?
+
+Packagist (an important component to the composer ecosystem) prefers dashes as separators (I was
+using dots). I had to update all the package names accordingly.
 
 # license
 
