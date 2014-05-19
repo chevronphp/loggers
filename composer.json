@@ -1,5 +1,5 @@
 {
-	"name"        : "henderjon/chevron.loggers",
+	"name"        : "henderjon/chevron-loggers",
 	"type"        : "library",
 	"description" : "a blindingly simple logger implementing PSR-3",
 	"homepage"    : "http://github.com/henderjon/chevron.loggers",
