@@ -8,7 +8,7 @@ use \Chevron\DB\Interfaces\PDOWrapperInterface;
  * implement the Psr3 Logger mixed with mysql via Chevron\DB
  * @package Chevron\Logger
  */
-class MySQLLogger extends AbstractLogger {
+class PDOLogger extends AbstractLogger {
 
 	/**
 	 * The db object
