@@ -13,7 +13,7 @@ class UserFuncLogger extends AbstractLogger {
 	}
 
 	public function log( $level, $message, array $context = array() ) {
-		return call_user_func($this->output, $level, $message, $context);
+		call_user_func($this->output, $level, $message, $context);
 	}
 
 }
