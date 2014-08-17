@@ -6,14 +6,14 @@ use \Psr\Log\AbstractLogger;
 
 class UserFuncLogger extends AbstractLogger {
 
-	protected $output;
+	protected $func;
 
 	public function __construct(callable $func){
-		$this->output = $func;
+		$this->func = $func;
 	}
 
 	public function log( $level, $message, array $context = array() ) {
-		call_user_func($this->output, $level, $message, $context);
+		call_user_func($this->func, $level, $message, $context);
 	}
 
 }

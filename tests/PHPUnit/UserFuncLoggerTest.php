@@ -6,19 +6,17 @@ class UseFuncLoggerTest extends PHPUnit_Framework_TestCase {
 
 	function test_UserFuncLogger(){
 
-		$handle = fopen("php://memory", "w+");
+		$handle = "";
 
 		$logger = new UserFuncLogger(function($level, $message, $context)use(&$handle){
-			fwrite($handle, sprintf("%s|%s|%s", $level, $message, json_encode($context)));
+			$handle = sprintf("%s|%s|%s", $level, $message, json_encode($context));
 		});
 
 		$logger->alert("five", [555]);
 
-		rewind($handle);
-
 		$expected = "alert|five|[555]";
 
-		$this->assertEquals($expected, fgets($handle));
+		$this->assertEquals($expected, $handle);
 
 	}
 
