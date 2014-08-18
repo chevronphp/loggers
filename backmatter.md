@@ -15,6 +15,10 @@
 
 [![Build Status](https://travis-ci.org/henderjon/chevron.loggers.svg?branch=master)](https://travis-ci.org/henderjon/chevron.loggers)
 
+#### hhvm
+
+[![HHVM Status](http://hhvm.h4cc.de/badge/henderjon/chevron-loggers.png)](http://hhvm.h4cc.de/package/henderjon/chevron-loggers)
+
 #### scruitinizer-ci
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/henderjon/chevron.loggers/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/henderjon/chevron.loggers/?branch=master)
