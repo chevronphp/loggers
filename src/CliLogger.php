@@ -2,8 +2,6 @@
 
 namespace Chevron\Loggers;
 
-use \Psr\Log\AbstractLogger;
-
 class CliLogger extends UserFuncLogger {
 
 	protected $func;
