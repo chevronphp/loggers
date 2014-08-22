@@ -15,9 +15,10 @@ class CliLoggerTest extends PHPUnit_Framework_TestCase {
 		$result = ob_get_clean();
 
 		$expected =  "\n\n-------------------------\n\n";
-		$expected .= "  level => ALERT\n";
-		$expected .= "message => five\n";
-		$expected .= "      0 => 555\n";
+		$expected .= "    level => ALERT\n";
+		$expected .= "  message => five\n";
+		$expected .= "timestamp => ".date("c")."\n";
+		$expected .= "        0 => 555\n";
 		$expected .= "\n\n-------------------------\n\n";
 
 		$this->assertEquals($expected, $result);

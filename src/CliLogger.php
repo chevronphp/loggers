@@ -11,7 +11,7 @@ class CliLogger extends UserFuncLogger {
 	public function __construct(){
 		$this->func = function($level, $message, array $context){
 
-			$context = ["level" => strtoupper($level), "message" => $message] + $context;
+			$context = ["level" => strtoupper($level), "message" => $message, "timestamp" => date("c")] + $context;
 
 			$len = 0;
 			foreach($context as $key => $value){
