@@ -23,12 +23,13 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 			"key" => "value",
 		]);
 
-		$date = date("c");
+		$date      = date("c (e)");
+		$timestamp = date("Y-m-d\THis\ZO");
 
 		$expected  = $this->expectedOutput($date);
 
 		$hash = substr(sha1($expected), 0, 9);
-		$name = "{$date}--NOTICE--{$hash}.txt";
+		$name = "{$timestamp}--NOTICE--{$hash}.txt";
 
 		$file = "{$path}/{$name}";
 
@@ -47,7 +48,7 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 			"key" => "value",
 		]);
 
-		$date = date("c");
+		$date = date("c (e)");
 
 		$expected  = $this->expectedOutput($date);
 
@@ -74,7 +75,7 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 			"key" => "value",
 		]);
 
-		$date = date("c");
+		$date = date("c (e)");
 
 		$expected  = $this->expectedOutput($date);
 

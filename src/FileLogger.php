@@ -20,7 +20,7 @@ class FileLogger extends AbstractLogger {
 
 	public function log( $level, $message, array $context = array() ) {
 
-		$context = ["level" => strtoupper($level), "message" => $message, "timestamp" => date("c")] + $context;
+		$context = ["level" => strtoupper($level), "message" => $message, "timestamp" => date("c (e)")] + $context;
 
 		$output = "";
 
@@ -35,7 +35,8 @@ class FileLogger extends AbstractLogger {
 		$name = $this->name;
 		if(!$name){
 			$hash = substr(sha1($output), 0, 9);
-			$name = "{$context["timestamp"]}--{$context["level"]}--{$hash}.txt";
+			$timestamp = date("Y-m-d\THis\ZO");
+			$name = "{$timestamp}--{$context["level"]}--{$hash}.txt";
 		}
 
 		file_put_contents("{$this->path}/{$name}", $output);
