@@ -2,6 +2,18 @@
 
 class FileLoggerTest extends PHPUnit_Framework_TestCase {
 
+	function expectedOutput($ts){
+		$expected  = "\n\n/// level\n////////////////////////////////////////////////////////////////////////\n\nNOTICE";
+		$expected .= "\n\n";
+		$expected .= "\n\n/// message\n////////////////////////////////////////////////////////////////////////\n\nOOPS";
+		$expected .= "\n\n";
+		$expected .= "\n\n/// timestamp\n////////////////////////////////////////////////////////////////////////\n\n{$ts}";
+		$expected .= "\n\n";
+		$expected .= "\n\n/// key\n////////////////////////////////////////////////////////////////////////\n\nvalue";
+		$expected .= "\n\n";
+		return $expected;
+	}
+
 	function test_log(){
 		$path = sys_get_temp_dir();
 
@@ -13,12 +25,7 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 
 		$date = date("c");
 
-		$expected = "\n\n-------------------------\n\n";
-		$expected .= "    level => NOTICE\n";
-		$expected .= "  message => OOPS\n";
-		$expected .= "timestamp => {$date}\n";
-		$expected .= "      key => value\n";
-		$expected .= "\n\n-------------------------\n\n";
+		$expected  = $this->expectedOutput($date);
 
 		$hash = substr(sha1($expected), 0, 9);
 		$name = "{$date}--NOTICE--{$hash}.txt";
@@ -42,12 +49,7 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 
 		$date = date("c");
 
-		$expected = "\n\n-------------------------\n\n";
-		$expected .= "    level => NOTICE\n";
-		$expected .= "  message => OOPS\n";
-		$expected .= "timestamp => {$date}\n";
-		$expected .= "      key => value\n";
-		$expected .= "\n\n-------------------------\n\n";
+		$expected  = $this->expectedOutput($date);
 
 		$hash = substr(sha1($expected), 0, 9);
 		// $name = "{$date}--NOTICE--{$hash}.txt";
@@ -74,12 +76,7 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 
 		$date = date("c");
 
-		$expected = "\n\n-------------------------\n\n";
-		$expected .= "    level => NOTICE\n";
-		$expected .= "  message => OOPS\n";
-		$expected .= "timestamp => {$date}\n";
-		$expected .= "      key => value\n";
-		$expected .= "\n\n-------------------------\n\n";
+		$expected  = $this->expectedOutput($date);
 
 		$hash = substr(sha1($expected), 0, 9);
 		// $name = "{$date}--NOTICE--{$hash}.txt";
