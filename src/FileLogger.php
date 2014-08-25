@@ -28,12 +28,7 @@ class FileLogger extends AbstractLogger {
 			$output .= "\n\n";
 			$output .= "/// {$key}\n";
 			$output .= str_repeat("/", 72) . "\n\n";
-
-			if(null  === $value){ $value = "(null)null";  }
-			if(false === $value){ $value = "(bool)false"; }
-			if(true  === $value){ $value = "(bool)true";  }
-
-			$output .= print_r($value, true);
+			$output .= sprintf("(%s)%s", gettype($value), print_r($value, true));
 			$output .= "\n\n";
 		}
 
