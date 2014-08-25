@@ -11,7 +11,7 @@ class CliLoggerTest extends PHPUnit_Framework_TestCase {
 		$logger = new CliLogger;
 
 		ob_start();
-		$logger->alert("five", [555, true, [1, 2], null, false]);
+		$logger->alert("five", [555, true, null, false]);
 		$result = ob_get_clean();
 
 		$expected =  "\n\n-------------------------\n\n";
@@ -20,8 +20,8 @@ class CliLoggerTest extends PHPUnit_Framework_TestCase {
 		$expected .= "timestamp => (string)".date("c")."\n";
 		$expected .= "        0 => (integer)555\n";
 		$expected .= "        1 => (boolean)1\n";
-		$expected .= "        3 => (NULL)\n";
-		$expected .= "        4 => (boolean)\n";
+		$expected .= "        2 => (NULL)\n";
+		$expected .= "        3 => (boolean)\n";
 		$expected .= "\n\n-------------------------\n\n";
 
 		$this->assertEquals($expected, $result);
