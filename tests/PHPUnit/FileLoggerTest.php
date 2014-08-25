@@ -11,6 +11,12 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 		$expected .= "\n\n";
 		$expected .= "\n\n/// key\n////////////////////////////////////////////////////////////////////////\n\nvalue";
 		$expected .= "\n\n";
+		$expected .= "\n\n/// null\n////////////////////////////////////////////////////////////////////////\n\n(null)null";
+		$expected .= "\n\n";
+		$expected .= "\n\n/// false\n////////////////////////////////////////////////////////////////////////\n\n(bool)false";
+		$expected .= "\n\n";
+		$expected .= "\n\n/// true\n////////////////////////////////////////////////////////////////////////\n\n(bool)true";
+		$expected .= "\n\n";
 		return $expected;
 	}
 
@@ -21,6 +27,9 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 
 		$logger->notice("OOPS", [
 			"key" => "value",
+			"null"  => null,
+			"false" => false,
+			"true"  => true,
 		]);
 
 		$date      = date("c (e)");
@@ -46,6 +55,9 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 
 		$logger->notice("OOPS", [
 			"key" => "value",
+			"null" => null,
+			"false" => false,
+			"true"  => true,
 		]);
 
 		$date = date("c (e)");
@@ -73,6 +85,9 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 
 		$logger->notice("OOPS", [
 			"key" => "value",
+			"null" => null,
+			"false" => false,
+			"true"  => true,
 		]);
 
 		$date = date("c (e)");
