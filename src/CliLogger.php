@@ -17,8 +17,9 @@ class CliLogger extends AbstractLogger {
 		$output = "\n\n-------------------------\n\n";
 
 		foreach($context as $key => $value){
-			if(!is_scalar($value) && !is_null($value)){ continue; }
-			$output .= sprintf("%{$len}s => (%s)%s\n", $key, gettype($value), $value);
+			if(is_scalar($value) || is_null($value)){
+				$output .= sprintf("%{$len}s => (%s)%s\n", $key, gettype($value), $value);
+			}
 		}
 
 		$output .= "\n\n-------------------------\n\n";
