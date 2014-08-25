@@ -33,7 +33,7 @@ class FileLoggerTest extends PHPUnit_Framework_TestCase {
 		]);
 
 		$date      = date("c (e)");
-		$timestamp = date("Y-m-d\THis\ZO");
+		$timestamp = date("Y.m.d\TH.i.s\ZO");
 
 		$expected  = $this->expectedOutput($date);
 

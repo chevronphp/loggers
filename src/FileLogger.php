@@ -35,7 +35,7 @@ class FileLogger extends AbstractLogger {
 		$name = $this->name;
 		if(!$name){
 			$hash = substr(sha1($output), 0, 9);
-			$timestamp = date("Y-m-d\THis\ZO");
+			$timestamp = date("Y.m.d\TH.i.s\ZO");
 			$name = "{$timestamp}--{$context["level"]}--{$hash}.txt";
 		}
 
