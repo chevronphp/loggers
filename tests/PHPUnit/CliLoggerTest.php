@@ -14,15 +14,15 @@ class CliLoggerTest extends PHPUnit_Framework_TestCase {
 		$logger->alert("five", [555, true, null, false]);
 		$result = ob_get_clean();
 
-		$expected =  "\n\n-------------------------\n\n";
+		$expected =  "\n\n--------------------------------------------------\n\n";
 		$expected .= "    level => (string)ALERT\n";
 		$expected .= "  message => (string)five\n";
-		$expected .= "timestamp => (string)".date("c")."\n";
+		$expected .= "timestamp => (string)".date("c (e)")."\n";
 		$expected .= "        0 => (integer)555\n";
 		$expected .= "        1 => (boolean)1\n";
 		$expected .= "        2 => (NULL)\n";
 		$expected .= "        3 => (boolean)\n";
-		$expected .= "\n\n-------------------------\n\n";
+		$expected .= "\n\n\n";
 
 		$this->assertEquals($expected, $result);
 
