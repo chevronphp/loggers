@@ -13,17 +13,17 @@
 
 #### travis-ci
 
-[![Build Status](https://travis-ci.org/chevron/loggers.svg?branch=master)](https://travis-ci.org/chevron/loggers)
+[![Build Status](https://travis-ci.org/chevronphp/loggers.svg?branch=master)](https://travis-ci.org/chevronphp/loggers)
 
 #### hhvm
 
-[![HHVM Status](http://hhvm.h4cc.de/badge/chevron/loggers.png)](http://hhvm.h4cc.de/package/chevron/loggers)
+[![HHVM Status](http://hhvm.h4cc.de/badge/chevronphp/loggers.png)](http://hhvm.h4cc.de/package/chevronphp/loggers)
 
 #### scruitinizer-ci
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/chevron/loggers/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chevron/loggers/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/chevron/loggers/badges/build.png?b=master)](https://scrutinizer-ci.com/g/chevron/loggers/build-status/master)
-[![Code Coverage](https://scrutinizer-ci.com/g/chevron/loggers/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/chevron/loggers/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/chevronphp/loggers/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chevronphp/loggers/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/chevronphp/loggers/badges/build.png?b=master)](https://scrutinizer-ci.com/g/chevronphp/loggers/build-status/master)
+[![Code Coverage](https://scrutinizer-ci.com/g/chevronphp/loggers/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/chevronphp/loggers/?branch=master)
 
 #### links
 
