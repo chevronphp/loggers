@@ -1,4 +1,4 @@
-[![License](https://poser.pugx.org/henderjon/chevron-loggers/license.svg)](https://packagist.org/packages/henderjon/chevron-loggers)
+[![License](https://poser.pugx.org/chevron/loggers/license.svg)](https://packagist.org/packages/chevron/loggers)
 
 Copyright (c) 2012, Jon Henderson (@henderjon) All rights reserved.
 

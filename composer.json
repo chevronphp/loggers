@@ -1,8 +1,8 @@
 {
-	"name"        : "henderjon/chevron-loggers",
+	"name"        : "chevron/loggers",
 	"type"        : "library",
 	"description" : "a blindingly simple logger implementing PSR-3",
-	"homepage"    : "http://github.com/henderjon/chevron.loggers",
+	"homepage"    : "http://github.com/chevronphp/loggers",
 	"license"     : "BSD-3-Clause",
 	"authors"     : [
 		{
