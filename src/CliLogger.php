@@ -17,7 +17,7 @@ class CliLogger extends AbstractLogger {
 		$output = "\n\n--------------------------------------------------\n\n";
 
 		foreach($context as $key => $value){
-			$output .= sprintf("%{$len}s => (%s)%s\n", $key, gettype($value), $value);
+			$output .= sprintf("%{$len}s => (%s)%s\n", $key, gettype($value), json_encode($value));
 		}
 
 		$output .= "\n\n\n";
