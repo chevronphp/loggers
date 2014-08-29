@@ -1,4 +1,4 @@
-# chevron.loggers
+# chevron/loggers
 
 Loggers is a blindingly simple logger implementing PSR-3.
 
@@ -7,7 +7,7 @@ the cool kids are using.
 
 Peruse the tests or, if present, the examples directory to see usage.
 
-See [packagist](https://packagist.org/packages/chevron/loggers) for version/installation info. At the moment, I recommend using `~4.0`.
+See [packagist](https://packagist.org/packages/chevron/loggers) for version/installation info. At the moment, I recommend using `"chevron/loggers" : "~4.0"`.
 
 [![Latest Stable Version](https://poser.pugx.org/chevron/loggers/v/stable.svg)](https://packagist.org/packages/chevron/loggers)
 [![Build Status](https://travis-ci.org/chevronphp/loggers.svg?branch=master)](https://travis-ci.org/chevronphp/loggers)
