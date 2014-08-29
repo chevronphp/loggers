@@ -17,7 +17,7 @@
 
 #### hhvm
 
-[![HHVM Status](http://hhvm.h4cc.de/badge/chevronphp/loggers.png)](http://hhvm.h4cc.de/package/chevronphp/loggers)
+[![HHVM Status](http://hhvm.h4cc.de/badge/chevron/loggers.png)](http://hhvm.h4cc.de/package/chevron/loggers)
 
 #### scruitinizer-ci
 
