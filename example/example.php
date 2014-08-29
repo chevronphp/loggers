@@ -2,6 +2,7 @@
 
 require "vendor/autoload.php";
 
+// $logger = new \Chevron\Loggers\CliLogger;
 $logger = new \Chevron\Loggers\CliLogger;
 
 $logger->info("Testing", [
