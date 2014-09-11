@@ -14,7 +14,7 @@ class CliLogger extends AbstractLogger {
 			if( ($l = strlen($key)) > $len){ $len = $l; }
 		}
 
-		$output = "\n\n--------------------------------------------------\n\n";
+		$output = "\n\n".str_repeat("-", 72)."\n\n";
 
 		foreach($context as $key => $value){
 			$output .= sprintf("%{$len}s => (%s)%s\n", $key, gettype($value), json_encode($value));
