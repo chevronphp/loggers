@@ -4,11 +4,11 @@ namespace Chevron\Loggers;
 
 use Psr\Log;
 
-abstract class DbLogger extends Log\AbstractLogger {
-	protected $db;
+abstract class BaseLogger extends Log\AbstractLogger {
+	protected $base;
 
-	function __construct($db){
-		$this->db = $db;
+	function __construct($base = null){
+		$this->base = $base;
 	}
 
 	abstract function log($level, $message, array $context = []);

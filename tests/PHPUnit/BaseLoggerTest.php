@@ -4,25 +4,25 @@ namespace DbLoggerTest;
 
 use Psr\Log;
 
-class ExtLogger extends \Chevron\Loggers\DbLogger {
+class ExtLogger extends \Chevron\Loggers\BaseLogger {
 
-	function getDb(){
-		return $this->db;
+	function getBase(){
+		return $this->base;
 	}
 
 	function log($level, $message, array $context = []){
-		$this->db .= "{$level}|{$message}|".count($context);
+		$this->base .= "{$level}|{$message}|".count($context);
 	}
 
 }
 
-class DbLoggerTest extends \PHPUnit_Framework_TestCase {
+class BaseLoggerTest extends \PHPUnit_Framework_TestCase {
 
 	function test_log(){
 		$logger = new ExtLogger("");
 		$logger->notice("notice me", [1,2,3]);
 
-		$expected = $logger->getDb();
+		$expected = $logger->getBase();
 		$this->assertEquals($expected, "notice|notice me|3");
 	}
 
@@ -30,7 +30,7 @@ class DbLoggerTest extends \PHPUnit_Framework_TestCase {
 		$logger = new ExtLogger("");
 		call_user_func($logger, LOG\LogLevel::NOTICE, "notice me", [1,2,3]);
 
-		$expected = $logger->getDb();
+		$expected = $logger->getBase();
 		$this->assertEquals($expected, "notice|notice me|3");
 	}
 
