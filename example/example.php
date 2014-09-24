@@ -13,3 +13,15 @@ $logger->info("Testing", [
 	"false"  => false,
 	"null"   => null,
 ]);
+
+//extending BaseLogger allows for typehinting on the constructor
+class DbLogger extends \Chevron\Loggers\BaseLogger {
+
+	function __construct(sdtClass $dbObject){
+		$this->base = $dbObject;
+	}
+
+	function log($level, $message, array $context = []){
+		$this->base->insert("insert into log_table (`level`, `message`, `context`) values ('{$level}', '{$message}', '".serialize($context)."');");
+	}
+}
