@@ -2,18 +2,12 @@
 
 namespace Chevron\Loggers;
 
-use \Psr\Log\AbstractLogger;
-
-class UserFuncLogger extends AbstractLogger {
-
-	protected $func;
-
-	public function __construct(callable $func){
-		$this->func = $func;
+class UserFuncLogger extends AbstractDestinationLogger {
+	function __construct(callable $destination){
+		$this->destination = $destination;
 	}
 
-	public function log( $level, $message, array $context = array() ) {
-		call_user_func($this->func, $level, $message, $context);
+	function log( $level, $message, array $context = array() ) {
+		call_user_func($this->destination, $level, $message, $context);
 	}
-
 }
