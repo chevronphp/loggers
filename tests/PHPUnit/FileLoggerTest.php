@@ -112,7 +112,7 @@ expected;
 	}
 
 	/**
-	 * @expectedException \Chevron\Loggers\Exceptions\LoggerException
+	 * @expectedException \Chevron\Loggers\LoggerException
 	 */
 	function test_log_exceptions(){
 		$path = "../not-a-dir";

@@ -6,7 +6,7 @@ use \Psr\Log\AbstractLogger;
 
 class CliLogger extends AbstractLogger {
 
-	public function log($level, $message, array $context = []){
+	function log($level, $message, array $context = []){
 		$context = ["log.level" => strtoupper($level), "log.message" => $message, "log.timestamp" => date("c (e)") ] + $context;
 
 		$len = 0;

@@ -10,15 +10,15 @@ class FileLogger extends AbstractLogger {
 
 	protected $name;
 
-	public function __construct($path, $name = ""){
+	function __construct($path, $name = ""){
 		if(!is_dir($path)){
-			throw new Exceptions\LoggerException("'{$path}' is not a directory");
+			throw new LoggerException("'{$path}' is not a directory");
 		}
 		$this->path = rtrim($path, DIRECTORY_SEPARATOR);
 		$this->name = $name;
 	}
 
-	public function log( $level, $message, array $context = array() ) {
+	function log( $level, $message, array $context = array() ) {
 
 		$context = ["log.level" => strtoupper($level), "log.message" => $message, "log.timestamp" => date("c (e)") ] + $context;
 

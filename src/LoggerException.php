@@ -1,5 +1,5 @@
 <?php
 
-namespace Chevron\Loggers\Exceptions;
+namespace Chevron\Loggers;
 
 class LoggerException extends \Exception {}
