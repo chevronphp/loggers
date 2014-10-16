@@ -22,15 +22,15 @@ class FileLogger extends AbstractLogger {
 
 		$context = ["log.level" => strtoupper($level), "log.message" => $message, "log.timestamp" => date("c (e)") ] + $context;
 
-		$output = "";
-
+		ob_start();
 		foreach($context as $key => $value){
-			$output .= "\n\n";
-			$output .= "/// {$key}\n";
-			$output .= str_repeat("/", 72) . "\n\n";
-			$output .= sprintf("(%s)%s", gettype($value), print_r($value, true));
-			$output .= "\n\n";
+			echo "\n\n";
+			echo "/// {$key}\n";
+			echo str_repeat("/", 72) . "\n\n";
+			var_dump($value);
+			echo "\n";
 		}
+		$output = ob_get_clean();
 
 		$name = $this->name;
 		if(!$name){
