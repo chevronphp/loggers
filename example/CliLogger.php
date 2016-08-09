@@ -1,12 +1,6 @@
 <?php
-
-namespace Chevron\Loggers;
-
-use \Psr\Log\AbstractLogger;
-
-class CliLogger extends AbstractLogger {
-
-	function log($level, $message, array $context = []){
+class CliLogger {
+	function __invoke($level, $message, array $context = []){
 		$context = ["log.level" => strtoupper($level), "log.message" => $message, "log.timestamp" => date("c (e)") ] + $context;
 
 		$len = 0;
@@ -24,5 +18,6 @@ class CliLogger extends AbstractLogger {
 
 		echo $output;
 	}
-
 }
+
+$logger = \Chevron\Loggers\UserFuncLogger(new CliLogger);

@@ -2,7 +2,7 @@
 
 namespace Chevron\Loggers;
 
-class UserFuncLogger extends AbstractDestinationLogger {
+class UserFuncLogger extends \Psr\Log\AbstractLogger {
 	function __construct(callable $destination){
 		$this->destination = $destination;
 	}

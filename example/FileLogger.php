@@ -1,10 +1,6 @@
 <?php
 
-namespace Chevron\Loggers;
-
-use \Psr\Log\AbstractLogger;
-
-class FileLogger extends AbstractLogger {
+class FileLogger {
 
 	protected $path;
 
@@ -18,7 +14,7 @@ class FileLogger extends AbstractLogger {
 		$this->name = $name;
 	}
 
-	function log( $level, $message, array $context = array() ) {
+	function __invoke( $level, $message, array $context = array() ) {
 
 		$context = ["log.level" => strtoupper($level), "log.message" => $message, "log.timestamp" => date("c (e)") ] + $context;
 
@@ -44,3 +40,6 @@ class FileLogger extends AbstractLogger {
 	}
 
 }
+
+
+$logger = \Chevron\Loggers\UserFuncLogger(new FileLogger($path, $file));
